@@ -1,0 +1,12 @@
+
+
+<% course = Course.order('created_at DESC').limit(100) %>
+<% a = 0 %>
+<% while a < course.length %>
+<a href='/course/<%=a%>'> <%= course[a].name %></a> <br>
+<br>
+<% a += 1 %>
+<% end %>
+
+
+<a href="/logout">log out</a> 
